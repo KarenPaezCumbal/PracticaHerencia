@@ -108,7 +108,7 @@ public class PersonaH {
     
     public String imprimir(){
         return """
-               --------Persona-------- 
+               --------Datos Persona-------- 
                id: """ +getIdPersona()+"\n"+
                 "Nombre" +getNombre()+"\n"+
                 "Apellido" +getApellido()+"\n"+

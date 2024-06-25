@@ -4,6 +4,7 @@
  */
 package Vista;
 
+import Modelo.Administrativo;
 import Modelo.Docente;
 import Modelo.Persona;
 
@@ -20,7 +21,21 @@ public class Main {
         d.setApellido("Paez");
         d.setTitulo("Tecnologia");
         System.out.println(d.imprimir());
+        
+        Administrativo a=new Administrativo(12, 
+                "Estudiante", 
+                "Software",
+                1, 
+                "Karen",
+                "Paez",
+                "1004446702",
+                978631727,
+                "Ibarra",
+                "karencumbal963@gmail.com",
+                "Femenino",
+                "2005/02/19");
+        System.out.println(a.imprimir());
      
        
     }
-}
+}                             
