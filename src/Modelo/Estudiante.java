@@ -8,29 +8,32 @@ package Modelo;
  *
  * @author LENOVO
  */
-public class Estudainte extends PersonaH {
-    private int idEstudainte;
+public class Estudiante extends PersonaH {
+    private int idEstudiante;
     private int numMatricula;
     private String horario;
     private String jornada;
 
-    public Estudainte() {
+    public Estudiante() {
     }
 
-    public Estudainte(int idEstudainte, int numMatricula, String horario, String jornada, int idPersona, String nombre, String apellido, String cedula, int telefono, String direccion, String correoElectronico, String sexo, String fechaNacimiento) {
-        super(idPersona, nombre, apellido, cedula, telefono, direccion, correoElectronico, sexo, fechaNacimiento);
-        this.idEstudainte = idEstudainte;
+    public Estudiante(int idEstudiante, int numMatricula, String horario, String jornada, int idPersona, String nombre, String apellido, String cedula, int telefono, String direccion, String correoElectronico, String sexo, String fechaNacimiento, String usuario, String clave) {
+        super(idPersona, nombre, apellido, cedula, telefono, direccion, correoElectronico, sexo, fechaNacimiento, usuario, clave);
+        this.idEstudiante = idEstudiante;
         this.numMatricula = numMatricula;
         this.horario = horario;
         this.jornada = jornada;
     }
 
-    public int getIdEstudainte() {
-        return idEstudainte;
+   
+    
+
+    public int getIdEstudiante() {
+        return idEstudiante;
     }
 
-    public void setIdEstudainte(int idEstudainte) {
-        this.idEstudainte = idEstudainte;
+    public void setIdEstudiante(int idEstudiante) {
+        this.idEstudiante = idEstudiante;
     }
 
     public int getNumMatricula() {
@@ -56,6 +59,8 @@ public class Estudainte extends PersonaH {
     public void setJornada(String jornada) {
         this.jornada = jornada;
     }
+
+    
     
     public String imprimir(){
         return """
@@ -70,7 +75,7 @@ public class Estudainte extends PersonaH {
                 "Sexo:" +getSexo()+"\n"+
                 "Fecha Nacimiento: " +getFechaNacimiento()+"\n"+
                 "--------Datos Estudiante-------"+"\n"+
-                "id Estudainte: "+getIdEstudainte()+"\n"+
+                "id Estudiante: "+getIdEstudiante()+"\n"+
                 "Numero Matricula: "+getNumMatricula()+"\n"+
                 "Horario: "+getHorario()+"\n"+
                 "Jornada:"+getJornada();

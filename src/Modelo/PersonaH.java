@@ -18,11 +18,14 @@ public class PersonaH {
     private String correoElectronico;
     private String sexo;
     private String fechaNacimiento;
+    private String usuario;
+    private String clave;
+    public String Sexo;
 
     public PersonaH() {
     }
 
-    public PersonaH(int idPersona, String nombre, String apellido, String cedula, int telefono, String direccion, String correoElectronico, String sexo, String fechaNacimiento) {
+    public PersonaH(int idPersona, String nombre, String apellido, String cedula, int telefono, String direccion, String correoElectronico, String sexo, String fechaNacimiento, String usuario, String clave) {
         this.idPersona = idPersona;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -32,7 +35,11 @@ public class PersonaH {
         this.correoElectronico = correoElectronico;
         this.sexo = sexo;
         this.fechaNacimiento = fechaNacimiento;
+        this.usuario = usuario;
+        this.clave = clave;
     }
+
+    
 
     public int getIdPersona() {
         return idPersona;
@@ -105,6 +112,23 @@ public class PersonaH {
     public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+    
     
     public String imprimir(){
         return """
@@ -115,10 +139,13 @@ public class PersonaH {
                 "Cedula" +getCedula()+"\n"+
                 "Telefono" +getTelefono()+"\n"+
                 "Direccion" +getDireccion()+"\n"+
+                "Usuario:"+getUsuario()+ "\n"+
+                "Clave:" + "************\n"+
                 "Correo Electronico" +getCorreoElectronico()+"\n"+
                 "Sexo" +getSexo()+"\n"+
                 "Fecha Nacimiento" +getFechaNacimiento();
     }
-    
+
+  
     
 }
