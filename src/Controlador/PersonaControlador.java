@@ -8,6 +8,7 @@ import Modelo.PersonaH;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -40,12 +41,39 @@ public class PersonaControlador {
                 System.out.println("Favor ingrese correctamente los datos solicitados ");
                 ejecutar.close();
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("ERROR");
-        } //captura el error y pone que la consola se siga ejecutando 
+        //captura el error y pone que la consola se siga ejecutando 
         
         
-    }
+        
+        }
     
+    }
+    public int buscarIdPersona(String cedula){
+        try {
+            String consultaSQL="SELECT idpersona FROM persona WHERE cedula='"+cedula;
+            ejecutar=(PreparedStatement)connection.prepareCall(consultaSQL);
+            int res=ejecutar.executeUpdate();
+            resultado=ejecutar.executeQuery();
+            if (resultado.next()) {
+                int idPersona=resultado.getInt("idpersona");
+                return idPersona;
+                
+            }else{
+                System.out.println("ingrese una cedula valida");
+                
+                
+            }
+            
+        } catch (SQLException e) {
+            System.out.println("Comuniquese con el administrador");
+        }
+        return 0;
+    }
+
+    public void crearPersona() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

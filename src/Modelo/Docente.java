@@ -99,6 +99,10 @@ public class Docente extends PersonaH{
                 "Registro Senescyt: " +getResgistroSenescyt()+"\n"+
                 "Escala Salarial: " +getEscalaSalarial();
     }
+
+    public String getRegistroSenecyt() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     
 }
